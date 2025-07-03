@@ -1,4 +1,5 @@
 import React from 'react'
+import HotelList from './HotelList'
 
 function Hero() {
   return (
@@ -36,6 +37,8 @@ function Hero() {
           </button>
         </div>
       </div>
+      {/* Hotel List Component */}
+ 
     </section>
   )
 }

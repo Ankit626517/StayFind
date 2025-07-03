@@ -1,12 +1,17 @@
 import React from 'react'
 import HotelList from './HotelList'
+import Hero from './Hero'
 
 function Home() {
   return (
-    <div>
+    <>
+      {/* Hero Section */}
+      <Hero />
+      
+        {/* Background Image */}  
       <HotelList />
       
-    </div>
+    </>
   )
 }
 
