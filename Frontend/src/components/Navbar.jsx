@@ -18,6 +18,7 @@ const Navbar = () => {
             <Home className="text-rose-500 h-6 w-6" />
             <span className="font-semibold text-lg text-gray-800 tracking-wide">StayFinder</span>
           </Link>
+          
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center gap-6">
