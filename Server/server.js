@@ -24,7 +24,7 @@ app.get("/api/hotels", async (_, res) => {
         check_in_date: "2025-07-08",
         check_out_date: "2025-07-15",
         adults: "2",
-        currency: "USD",
+        currency: "INR",
         gl: "us",
         hl: "en",
         api_key: process.env.KEY, // Use the API key from .env

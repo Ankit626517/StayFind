@@ -2,6 +2,7 @@ import React from 'react'
 import HotelList from './HotelList'
 import Hero from './Hero'
 import About from '../components/About'
+import AnimatedSearchBar from "../pages/AnimatedSearchBar"
 
 function Home() {
   return (
@@ -10,7 +11,8 @@ function Home() {
       <Hero />
 
       {/* About Section */}
-      <About />
+    <AnimatedSearchBar/>
+      {/* <About /> */}
 
       {/* Background Image */}
       <HotelList />
