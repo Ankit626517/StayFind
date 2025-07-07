@@ -7,6 +7,7 @@ import Home from '../../Frontend/src/pages/Home'
 import Hero from '../../Frontend/src/pages/Hero'
 import Login from '../../Frontend/src/pages/Login'
 import Register from '../../Frontend/src/pages/Register'
+
 import { BrowserRouter , Routes , Route } from 'react-router-dom'
 
 import HotelList from '../../Frontend/src/pages/HotelList'

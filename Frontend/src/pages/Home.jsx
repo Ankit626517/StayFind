@@ -3,6 +3,7 @@ import HotelList from './HotelList'
 import Hero from './Hero'
 import About from '../components/About'
 import AnimatedSearchBar from "../pages/AnimatedSearchBar"
+import SearchBar from '../components/SearchBar'
 
 function Home() {
   return (
@@ -11,7 +12,7 @@ function Home() {
       <Hero />
 
       {/* About Section */}
-    <AnimatedSearchBar/>
+    <SearchBar/>
       {/* <About /> */}
 
       {/* Background Image */}
