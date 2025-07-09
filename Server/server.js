@@ -10,20 +10,28 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 
-app.get("/pin", (req, res) => {
-  res.send({ pin: "1234" });
-});
+
 
 // Backend (Node.js + Express)
-app.get("/api/hotels", async (_, res) => {
+app.get("/api/hotels", async (req, res) => {
+   const { location, checkindate, checkoutdate, adult } = req.query;
+
+  // 👇 Print data to console
+  console.log("Received from frontend:");
+  console.log("Location:", location);
+  console.log("Check-in:", checkindate);
+  console.log("Check-out:", checkoutdate);
+  console.log("Adults:", adult);
   try {
     const response = await axios.get("https://serpapi.com/search.json", {
       params: {
         engine: "google_hotels",
-        q: "indore",
-        check_in_date: "2025-07-08",
-        check_out_date: "2025-07-15",
-        adults: "2",
+        q: location,
+        // check_in_date: checkindate,
+        check_in_date: checkindate,
+
+        check_out_date: checkoutdate,
+        adults: adult,
         currency: "INR",
         gl: "us",
         hl: "en",
