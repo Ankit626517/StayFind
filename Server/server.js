@@ -10,11 +10,9 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 
-
-
 // Backend (Node.js + Express)
 app.get("/api/hotels", async (req, res) => {
-   const { location, checkindate, checkoutdate, adult } = req.query;
+  const { location, checkindate, checkoutdate, adult } = req.query;
 
   // 👇 Print data to console
   console.log("Received from frontend:");
@@ -22,12 +20,13 @@ app.get("/api/hotels", async (req, res) => {
   console.log("Check-in:", checkindate);
   console.log("Check-out:", checkoutdate);
   console.log("Adults:", adult);
+
   try {
     const response = await axios.get("https://serpapi.com/search.json", {
       params: {
         engine: "google_hotels",
         q: location,
-        // check_in_date: checkindate,
+
         check_in_date: checkindate,
 
         check_out_date: checkoutdate,
@@ -39,6 +38,9 @@ app.get("/api/hotels", async (req, res) => {
       },
     });
     res.json(response.data);
+    console.log(response.data)
+    
+    
   } catch (error) {
     res.status(500).json({ error: "Error fetching hotels data" });
   }
@@ -46,4 +48,5 @@ app.get("/api/hotels", async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}/api/hotels`);
+  
 });

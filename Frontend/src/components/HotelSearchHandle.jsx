@@ -37,7 +37,10 @@ function HotelSearchHandle() {
         },
       });
       const list = response.data.properties ?? response.data;
+      const listone = response.data
+      console.log(listone)
       setHotels(list);
+    
     } catch (error) {
       console.error("Error fetching hotels:", error);
     } finally {
