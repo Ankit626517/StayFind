@@ -15,7 +15,7 @@ function HotelList() {
   /* fetch once on mount */
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/hotels")
+      .get("https://stayfind-4i8k.onrender.com/api/hotels")
       .then((res) => {
         const list = res.data.properties ?? res.data;
         setHotels(list);

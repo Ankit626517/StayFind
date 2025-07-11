@@ -28,7 +28,7 @@ function HotelSearchHandle() {
     setLoading(true);
 
     try {
-      const response = await axios.get("http://localhost:3000/api/hotels", {
+      const response = await axios.get("https://stayfind-4i8k.onrender.com/api/hotels", {
         params: {
           location: formData.location,
           checkindate: formData.checkindate,
