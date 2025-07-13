@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import HotelCard from "./HotelCard"
 
-/* --------------------- SINGLE  H O R I Z O N T A L   C A R D --------------------- */
+
 <HotelCard/>
 
-/* ---------------------------  M A I N   L I S T --------------------------- */
+
 function HotelList() {
   const [hotels, setHotels] = useState([]);
   const [loading, setLoading] = useState(true);

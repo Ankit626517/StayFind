@@ -122,21 +122,17 @@ function HotelCard({ hotel }) {
           alt={hotel.name}
           className="w-full h-full object-cover"
         />
-  
-       <div className="absolute bottom-2 left-2 flex gap-1">
-  {(hotel?.images || [])
-    .slice(1, 4)
-    .map((img, i) => (
-      <img
-        key={i}
-        src={img.thumbnail || img.original_image}
-        alt="thumb"
-        className="w-10 h-10 rounded object-cover border border-white"
-      />
-    ))}
 
-</div>
-
+        <div className="absolute bottom-2 left-2 flex gap-1">
+          {(hotel?.images || []).slice(1, 4).map((img, i) => (
+            <img
+              key={i}
+              src={img.thumbnail || img.original_image}
+              alt="thumb"
+              className="w-10 h-10 rounded object-cover border border-white"
+            />
+          ))}
+        </div>
       </div>
 
       {/* Middle Details Section */}
@@ -145,7 +141,10 @@ function HotelCard({ hotel }) {
           <h2 className="text-lg font-semibold text-gray-900">{hotel.name}</h2>
           <p className="text-blue-600 text-sm font-medium">
             {location}
-            <span className="text-gray-500"> | 2 minutes walk to Medanta Hospital</span>
+            <span className="text-gray-500">
+              {" "}
+              | 2 minutes walk to Medanta Hospital
+            </span>
           </p>
           <span className="inline-block text-xs border px-2 py-0.5 rounded text-gray-700 border-gray-400 mt-1">
             Couple Friendly
@@ -165,12 +164,17 @@ function HotelCard({ hotel }) {
         </div>
 
         <p className="text-sm mt-3 text-purple-800 font-medium">
-          📍 Prime location in {location}, rooftop swimming pool, delicious breakfast buffet options
+          📍 Prime location in {location}, rooftop swimming pool, delicious
+          breakfast buffet options
         </p>
 
         <p className="text-xs text-gray-500 mt-1">
           This 5 Star Hotel in Indore is located in {location}. Full Address…{" "}
-          <a href={hotel.link} target="_blank" className="text-blue-600 underline">
+          <a
+            href={hotel.link}
+            target="_blank"
+            className="text-blue-600 underline"
+          >
             View More
           </a>
         </p>

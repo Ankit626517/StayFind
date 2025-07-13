@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 function Register() {
   return (
@@ -20,7 +20,7 @@ function Register() {
         <button type="submit">Register</button>
       </form>
     </div>
-  )
+  );
 }
 
-export default Register
+export default Register;
