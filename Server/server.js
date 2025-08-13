@@ -38,9 +38,7 @@ app.get("/api/hotels", async (req, res) => {
       },
     });
     res.json(response.data);
-    console.log(response.data)
-    
-    
+    console.log(response.data);
   } catch (error) {
     res.status(500).json({ error: "Error fetching hotels data" });
   }
@@ -48,5 +46,5 @@ app.get("/api/hotels", async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}/api/hotels`);
-  
 });
+ 
